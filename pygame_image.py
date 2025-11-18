@@ -22,12 +22,12 @@ def main():
     bird_img = pg.transform.flip(bird_img, True, False)
     
     tmr = 0
-    x, y = 0, 0
+    x = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
         
-        screen.blit(bg_img, [-x, y])
+        screen.blit(bg_img, [-x, 0])
         screen.blit(bird_img, [300, 200])
 
         pg.display.update()
@@ -35,7 +35,6 @@ def main():
         x = tmr
         
         clock.tick(200)
-        clock.tick(1400)
         
         screen.blit(bg_img2, [1600 - x, 0])
 
