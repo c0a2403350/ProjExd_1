@@ -42,6 +42,8 @@ def main():
         screen.blit(bg_img, [-x, 0])
         screen.blit(bird_img, bird_img_rec)
 
+        bird_img_rec.move_ip(-1, 0)
+
         pg.display.update()
         tmr += 1
         x = tmr
