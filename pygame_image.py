@@ -12,9 +12,6 @@ def main():
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
     bg_img = pg.transform.scale(bg_img, (1600, 900))
-
-    bg_img2 = pg.image.load("fig/pg_bg.jpg")
-    bg_img = pg.transform.scale(bg_img2, (1600, 900))
     
     bird_img = pg.image.load("fig/3.png")
     bird_img = pg.transform.flip(bird_img, True, False)
@@ -29,12 +26,13 @@ def main():
         screen.blit(bird_img, [300, 200])
 
         pg.display.update()
-        tmr += 1        
-        clock.tick(200)
-        clock.tick(600)
-        
+        tmr += 1
         x = tmr
-        # screen.blit(bg_img2, [800 - x, 0])
+        
+        clock.tick(200)
+        clock.tick(1400)
+        
+        screen.blit(bg_img, [1600 - x, 0])
 
 if __name__ == "__main__":
     pg.init()
