@@ -34,9 +34,13 @@ def main():
         tmr += 1
         x = tmr
         
-        clock.tick(200)
+        clock.tick(1000)
         
         screen.blit(bg_img2, [1600 - x, 0])
+        screen.blit(bg_img, [3200 - x, 0])
+        
+        if x > 3200:
+            tmr = 0
 
 if __name__ == "__main__":
     pg.init()
