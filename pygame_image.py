@@ -29,7 +29,7 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
             
-        # key_lst = pg.key.get_pressed()
+        key_lst = pg.key.get_pressed()
         # if key_lst[]
         # bird_img_rec.move_ip
         
