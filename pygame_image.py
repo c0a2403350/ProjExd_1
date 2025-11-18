@@ -35,7 +35,7 @@ def main():
         if key_lst[pg.K_DOWN]:
             bird_img_rec.move_ip(0, 1)
         if key_lst[pg.K_RIGHT]:
-            bird_img_rec.move_ip(1, 0)    
+            bird_img_rec.move_ip(2, 0)    
         if key_lst[pg.K_LEFT]:
             bird_img_rec.move_ip(-1, 0)
 
