@@ -34,7 +34,7 @@ def main():
         tmr += 1
         x = tmr
         
-        clock.tick(1000)
+        clock.tick(200)
         
         screen.blit(bg_img2, [1600 - x, 0])
         screen.blit(bg_img, [3200 - x, 0])
