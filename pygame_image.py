@@ -15,12 +15,13 @@ def main():
     bird_img = pg.transform.flip(bird_img, True, False)
     
     tmr = 0
+    x, y = 300, 200
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
         
         screen.blit(bg_img, [0, 0])
-        screen.blit(bird_img, [300, 200])
+        screen.blit(bird_img, [x, y])
 
         pg.display.update()
         tmr += 1        
