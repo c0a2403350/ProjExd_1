@@ -20,15 +20,21 @@ def main():
     
     bird_img = pg.image.load("fig/3.png")
     bird_img = pg.transform.flip(bird_img, True, False)
+    bird_img_rec = bird_img.get_rect()
+    bird_img_rec.center = 300, 200
     
     tmr = 0
     x = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+            
+        # key_lst = pg.key.get_pressed()
+        # if key_lst[]
+        # bird_img_rec.move_ip
         
         screen.blit(bg_img, [-x, 0])
-        screen.blit(bird_img, [300, 200])
+        screen.blit(bird_img, bird_img_rec)
 
         pg.display.update()
         tmr += 1
