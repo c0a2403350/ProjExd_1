@@ -28,7 +28,7 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-            
+        
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
             bird_img_rec.move_ip(0, -1)
@@ -45,14 +45,13 @@ def main():
         pg.display.update()
         tmr += 1
         x = tmr
-        
-        clock.tick(200)
-        
+
         screen.blit(bg_img2, [1600 - x, 0])
         screen.blit(bg_img, [3200 - x, 0])
-        
         if x > 3200:
             tmr = 0
+        
+        clock.tick(200)
 
 if __name__ == "__main__":
     pg.init()
