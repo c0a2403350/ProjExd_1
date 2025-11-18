@@ -12,6 +12,7 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")
 
     bird_img = pg.image.load("fig/3.png")
+    bird_img = pg.transform.scale(bird_img, (1600, 900))
     bird_img = pg.transform.flip(bird_img, True, False)
     
     tmr = 0
