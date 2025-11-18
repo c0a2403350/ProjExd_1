@@ -21,14 +21,15 @@ def main():
     x = 10
     y = 10
     while True:
+        pressed_key = pg.key.get_pressed()
+        if pressed_key[K_ESCAPE]: pg.quit()
+        if pressed_key[K_RIGHT]: x += 5
+        if pressed_key[K_LEFT]: x -= 5
+        if pressed_key[K_UP]: y -= 5
+        if pressed_key[K_DOWN]: y += 5
+
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-            pressed_key = pg.key.get_pressed()
-            if pressed_key[K_ESCAPE]: pg.quit()
-            if pressed_key[K_RIGHT]: x += 5
-            if pressed_key[K_LEFT]: x -= 5
-            if pressed_key[K_UP]: y -= 5
-            if pressed_key[K_DOWN]: y += 5
         
         txt = font.render(str(tmr), True, (255, 255, 255))
         screen.fill((50, 50, 50))
