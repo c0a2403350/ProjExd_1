@@ -13,6 +13,11 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")
     bg_img = pg.transform.scale(bg_img, (1600, 900))
     
+    bg_img2 = pg.image.load("fig/pg_bg.jpg")
+    bg_img2 = pg.transform.scale(bg_img2, (1600, 900))    
+    bg_img2 = pg.transform.flip(bg_img2, True, False)
+
+    
     bird_img = pg.image.load("fig/3.png")
     bird_img = pg.transform.flip(bird_img, True, False)
     
@@ -32,7 +37,7 @@ def main():
         clock.tick(200)
         clock.tick(1400)
         
-        screen.blit(bg_img, [1600 - x, 0])
+        screen.blit(bg_img2, [1600 - x, 0])
 
 if __name__ == "__main__":
     pg.init()
