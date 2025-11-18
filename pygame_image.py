@@ -30,9 +30,15 @@ def main():
             if event.type == pg.QUIT: return
             
         key_lst = pg.key.get_pressed()
-        # if key_lst[]
-        # bird_img_rec.move_ip
-        
+        if key_lst[pg.K_UP]:
+            bird_img_rec.move_ip(0, -1)
+        if key_lst[pg.K_DOWN]:
+            bird_img_rec.move_ip(0, 1)
+        if key_lst[pg.K_RIGHT]:
+            bird_img_rec.move_ip(1, 0)    
+        if key_lst[pg.K_LEFT]:
+            bird_img_rec.move_ip(-1, 0)
+
         screen.blit(bg_img, [-x, 0])
         screen.blit(bird_img, bird_img_rec)
 
