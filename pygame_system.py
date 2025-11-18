@@ -19,6 +19,7 @@ def main():
 
     tmr = 0
     x = 10
+    y = 10
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
@@ -26,11 +27,13 @@ def main():
             if pressed_key[K_ESCAPE]: pg.quit()
             if pressed_key[K_RIGHT]: x += 5
             if pressed_key[K_LEFT]: x -= 5
+            if pressed_key[K_UP]: y -= 5
+            if pressed_key[K_DOWN]: y += 5
         
         txt = font.render(str(tmr), True, (255, 255, 255))
         screen.fill((50, 50, 50))
         screen.blit(txt, [300, 200])
-        screen.blit(enn, [x, 400])
+        screen.blit(enn, [x, y])
         pg.display.update()
         tmr += 1        
         clock.tick(60)
